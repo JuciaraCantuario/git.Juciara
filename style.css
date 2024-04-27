@@ -1,35 +1,44 @@
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background-color: rgb(72, 209, 189); 
-    color: beige
-    
-  }
-  
-  .header {
-    background-color: rgb(72, 209, 189);
-    color: beige;
-    text-align: center;
-    padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: rgb(72, 209, 189); 
+  color: beige;
+  margin: 0; /* remova as margens padrão do body */
 }
 
-  }
-  
-  .main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-  }
-  
-  .section {
-    margin-bottom: 40px;
-  }
-  
-  .footer {
-    background-color: rgb(72, 209, 189);
-    color: beige;
-    text-align: center;
-    padding: 20px 0;
-  }
+.header, .main, .footer {
+  width: 100%; /* garanta que ocupem toda a largura da tela */
+  box-sizing: border-box; /* inclua padding e bordas na largura total */
+}
+
+.header, .footer {
+  background-color: rgb(72, 209, 189);
+  text-align: center;
+  padding: 20px 0;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1; /* faça o conteúdo ocupar todo o espaço restante na vertical */
+  padding: 20px;
+}
+
+.section {
+  margin-bottom: 40px;
+  max-width: 600px; /* limite a largura das seções para melhor legibilidade */
+  width: 100%; /* garanta que ocupem toda a largura disponível */
+}
+
+.figure {
+  margin-top: 20px; /* adicione espaço entre a seção e a figura */
+  text-align: center; /* centralize a figura */
+}
+
+.footer {
+  color: beige;
+  background-color: rgb(72, 209, 189);
+  padding: 20px 0;
+}
